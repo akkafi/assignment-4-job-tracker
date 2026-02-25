@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker | Assignment 4</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#ffffff]">
+    <!-- header section -->
+    <header class="w-11/12 mx-auto pt-[50px]">
+        <h1 class="text-[#002C5C] font-bold text-2xl mb-1.5 ">Job Application Tracker</h1>
+
+        <!-- Total Job Count section-->
+        <section>
+            <!-- Total Job Count div-->
+            <div class="job-card-container grid grid-cols-3 gap-4">
+                <!-- total div -->
+                <div class=" p-5 bg-[#ebedf1] rounded-lg">
+                    <h3 class="text-[#323B49] text-[18px]">Total</h3>
+                    <p class="text-2xl text-[#002C5C] font-semibold">0</p>
+                </div>
+                <!-- Interview div -->
+                <div class=" p-5 bg-[#ebedf1] rounded-lg">
+                    <h3 class="text-[#323B49] text-[18px]">Interview</h3>
+                    <p class="text-2xl text-green-500 font-semibold">0</p>
+                </div>
+                <!-- Rejected div -->
+                <div class="p-5 bg-[#ebedf1] rounded-lg">
+                    <h3 class="text-[#323B49] text-[18px]">Rejected</h3>
+                    <p class="text-2xl text-red-500 font-semibold">0</p>
+                </div>
+            </div>
+        </section>
+        <hr class="my-[30px] text-[#E6E7E9]">
+        <!-- Available Jobs section -->
+        <section class="">
+            <h1 class="text-[#002C5C] font-bold text-[20px] mb-1.5 ">Job Available Jobs</h1>
+
+            <div class="available-job-container flex justify-between">
+                <!-- All , Interview , Rejected Job -->
+                <div class="job-container flex gap-6">
+                    <div class="all btn text-white bg-[#3B82F6] py-2.5 px-6">ALL</div>
+                    <div class="interview btn text-white bg-[#3B82F6] py-2.5 px-6">Interview</div>
+                    <div class="rejected btn text-white bg-[#3B82F6] py-2.5 px-6">Rejected</div>
+                </div>
+                <div class="flex gap-2">
+                    <h2>0</h2>
+                    <h2>of</h2>
+                    <h2>0</h2>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- main section -->
+
+    <main class="w-11/12 mx-auto pt-[50px] h-screen">
+        <section>
+            <!-- card 1 -->
+                <div class="p-6 space-y-3.5 bg-[#dadada]">
+                    <div class="flex justify-between items-center">
+                        <div class="">
+                            <h2 class="text-[#002C5C] text-2xl font-semibold">Mobile First Corp</h2>
+                            <h3 class="text-[#64748B]">React Native Developer</h3>
+                        </div>
+                        <div class="w-[60px] h-[60px] bg-[#d3d1d1] rounded-full flex justify-center items-center text-2xl text-gray-700 hover:text-black hover:bg-[#c2c1c1] cursor-pointer border-2 border-gray-400">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                    <p class="text-[#64748B] leading-2.5">Remote • Full-time • $130,000 - $175,000</p>
+                    <button class="btn uppercase text-[#002C5C]">Not Applied</button>
+                    <p class="text-[#323B49]">
+                        Build cross-platform mobile applications using React Native. Work on products used by millions
+                        of users worldwide.
+                    </p>
+                    <div class="flex gap-5">
+                        <button class="uppercase btn border-2 border-green-400 text-green-500">interview</button>
+                        <button class="uppercase btn border-2 border-red-500 text-red-500">Rejected</button>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
