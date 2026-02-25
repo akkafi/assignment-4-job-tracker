@@ -36,7 +36,7 @@
         <!-- Total Job Count section-->
         <section>
             <!-- Total Job Count div-->
-            <div class="job-card-container grid grid-cols-3 gap-4">
+            <div class="job-card-container grid grid-cols-1 md:grid-cols-3 gap-4">
                 <!-- total div -->
                 <div class=" p-5 bg-[#ebedf1] rounded-lg">
                     <h3 class="text-[#323B49] text-[18px]">Total</h3>
@@ -57,21 +57,21 @@
         <hr class="my-[30px] text-[#E6E7E9]">
         <!-- Available Jobs section -->
         <section class="">
-            <h1 class="text-[#002C5C] font-bold text-[20px] mb-1.5 ">Job Available Jobs</h1>
-
-            <div class="available-job-container flex justify-between">
-                <!-- All , Interview , Rejected Job -->
-                <div class="job-container flex gap-6">
-                    <div class="all btn text-white bg-[#3B82F6] py-2.5 px-6">ALL</div>
-                    <div class="interview btn text-white bg-[#3B82F6] py-2.5 px-6">Interview</div>
-                    <div class="rejected btn text-white bg-[#3B82F6] py-2.5 px-6">Rejected</div>
-                </div>
+            <div class="flex justify-between">
+                <h1 class="text-[#002C5C] font-bold text-[20px] mb-1.5 ">Job Available Jobs</h1>
                 <div class="flex gap-2">
                     <h2>0</h2>
                     <h2>of</h2>
                     <h2>0</h2>
                 </div>
             </div>
+
+                <!-- All , Interview , Rejected Job btn -->
+                <div class="job-container flex gap-4 md:gap-6">
+                    <button id="all-filter-btn" class="all btn text-white bg-[#3B82F6] py-1.5 px-4 md:py-2.5 md:px-6">All</button>
+                    <button id="interview-filter-btn" class="interview btn text-gray-500  py-2.5 px-6">Interview</button>
+                    <button id="rejected-filter-btn" class="rejected btn text-gray-500 py-2.5 px-6">Rejected</button>
+                </div>
         </section>
     </header>
 
@@ -80,27 +80,28 @@
     <main class="w-11/12 mx-auto pt-[50px] h-screen">
         <section>
             <!-- card 1 -->
-                <div class="p-6 space-y-3.5 bg-[#dadada]">
-                    <div class="flex justify-between items-center">
-                        <div class="">
-                            <h2 class="text-[#002C5C] text-2xl font-semibold">Mobile First Corp</h2>
-                            <h3 class="text-[#64748B]">React Native Developer</h3>
-                        </div>
-                        <div class="w-[60px] h-[60px] bg-[#d3d1d1] rounded-full flex justify-center items-center text-2xl text-gray-700 hover:text-black hover:bg-[#c2c1c1] cursor-pointer border-2 border-gray-400">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </div>
+            <div class="p-6 space-y-3.5 bg-[#eeeded] rounded-lg">
+                <div class="flex justify-between items-center">
+                    <div class="">
+                        <h2 class="text-[#002C5C] text-2xl font-semibold">Mobile First Corp</h2>
+                        <h3 class="text-[#64748B]">React Native Developer</h3>
                     </div>
-                    <p class="text-[#64748B] leading-2.5">Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="btn uppercase text-[#002C5C]">Not Applied</button>
-                    <p class="text-[#323B49]">
-                        Build cross-platform mobile applications using React Native. Work on products used by millions
-                        of users worldwide.
-                    </p>
-                    <div class="flex gap-5">
-                        <button class="uppercase btn border-2 border-green-400 text-green-500">interview</button>
-                        <button class="uppercase btn border-2 border-red-500 text-red-500">Rejected</button>
+                    <div
+                        class="w-[60px] h-[60px] bg-[#d3d1d1] rounded-full flex justify-center items-center text-2xl text-gray-700 hover:text-black hover:bg-[#c2c1c1] cursor-pointer border-2 border-gray-400">
+                        <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
+                <p class="text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                <button class="btn uppercase text-[#002C5C]">Not Applied</button>
+                <p class="text-[#323B49]">
+                    Build cross-platform mobile applications using React Native. Work on products used by millions
+                    of users worldwide.
+                </p>
+                <div class="flex gap-5">
+                    <button class="uppercase btn border-2 border-green-400 text-green-500">interview</button>
+                    <button class="uppercase btn border-2 border-red-500 text-red-500">Rejected</button>
+                </div>
+            </div>
         </section>
     </main>
 
