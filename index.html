@@ -66,19 +66,22 @@
                 </div>
             </div>
 
-                <!-- All , Interview , Rejected Job btn -->
-                <div class="job-container flex gap-4 md:gap-6">
-                    <button id="all-filter-btn" class="all btn text-white bg-[#3B82F6] py-1.5 px-4 md:py-2.5 md:px-6">All</button>
-                    <button id="interview-filter-btn" class="interview btn text-gray-500  py-2.5 px-6">Interview</button>
-                    <button id="rejected-filter-btn" class="rejected btn text-gray-500 py-2.5 px-6">Rejected</button>
-                </div>
+            <!-- All , Interview , Rejected Job btn -->
+            <div class="job-container flex gap-4 md:gap-6">
+                <button onclick="switchTab('all')" id="tab-all"
+                    class="all btn bg-[#3B82F6] py-1.5 px-4 md:py-2.5 md:px-6">All</button>
+                <button onclick="switchTab('interview')" id="tab-interview"
+                    class="interview btn py-2.5 px-6">Interview</button>
+                <button onclick="switchTab('rejected')" id="tab-rejected"
+                    class="rejected btn py-2.5 px-6">Rejected</button>
+            </div>
         </section>
     </header>
 
     <!-- main section -->
 
-    <main class="w-11/12 mx-auto pt-[50px] h-screen">
-        <section>
+    <main class="w-11/12 mx-auto pt-[50px]">
+        <section id="all-section-container">
             <!-- card 1 -->
             <div class="p-6 space-y-3.5 bg-[#eeeded] rounded-lg">
                 <div class="flex justify-between items-center">
@@ -103,9 +106,28 @@
                 </div>
             </div>
         </section>
+
+        <section id="interview-section-container" class="interview">
+            <h1 class="my-10">Interview Section</h1>
+            <section id="empty-state" class="flex flex-col items-center justify-center py-20 gap-2 text-center">
+                <div><img src="./assets/jobs.png" alt=""></div>
+                <p class=" text-lg font-bold text-[#002C5C]">No jobs available</p>
+                <p class="text-slate-400">Check back soon for new job opportunities</p>
+            </section>
+        </section>
+        <section id="rejected-section-container" class="hidden rejected">Rejected Section</section>
+
+        <!-- empty state section-->
+        <div class="hidden">
+            <section id="empty-state" class="flex flex-col items-center justify-center py-20 gap-2 text-center">
+                <div><img src="./assets/jobs.png" alt=""></div>
+                <p class=" text-lg font-bold text-[#002C5C]">No jobs available</p>
+                <p class="text-slate-400">Check back soon for new job opportunities</p>
+            </section>
+        </div>
     </main>
 
-
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
