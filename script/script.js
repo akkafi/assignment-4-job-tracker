@@ -8,6 +8,7 @@ const buttonInActive = ['bg-gray-300', 'text-gray-600', 'text-black', 'py-[25px]
 const allSectionContainer = document.getElementById('all-section-container');
 const interviewSectionContainer = document.getElementById('interview-section-container');
 const rejectedSectionContainer = document.getElementById('rejected-section-container');
+const emptyState = document.getElementById('empty-state');
 // console.log(allSectionContainer, interviewSectionContainer, rejectedSectionContainer);
 
 function currentTab(currentTab){
@@ -30,12 +31,22 @@ function currentTab(currentTab){
         section.classList.add('hidden')
     }
 
+    emptyState.classList.add('hidden');
     if(currentTab === 'all'){
-        allSectionContainer.classList.remove('hidden')
+        allSectionContainer.classList.remove('hidden');
+        if(allSectionContainer.children.length < 1){
+            emptyState.classList.remove('hidden');
+        }
     }else if(currentTab === 'interview'){
-        interviewSectionContainer.classList.remove('hidden')
+        interviewSectionContainer.classList.remove('hidden');
+          if(interviewSectionContainer.children.length < 1){
+            emptyState.classList.remove('hidden');
+        }
     }else{
-        rejectedSectionContainer.classList.remove('hidden')
+        rejectedSectionContainer.classList.remove('hidden');
+          if(rejectedSectionContainer.children.length < 1){
+            emptyState.classList.remove('hidden');
+        }
     }
 
 }
