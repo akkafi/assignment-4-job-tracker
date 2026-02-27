@@ -92,8 +92,14 @@ document.getElementById('all-job-container')
 })
 
 function updateStatus(){
-    countTotal.innerText = allSectionContainer.children.length;
-    countInterview.innerText = interviewSectionContainer.children.length;
-    countReject.innerText = rejectedSectionContainer.children.length;
+    const allCounts ={
+        all: allSectionContainer.children.length,
+        interview: interviewSectionContainer.children.length,
+        rejected: rejectedSectionContainer.children.length
+    };
+    countTotal.innerText = allCounts.all;
+    countInterview.innerText = allCounts.interview;
+    countReject.innerText = allCounts.rejected;
+
 }
  updateStatus()
