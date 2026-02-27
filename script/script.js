@@ -105,5 +105,11 @@ function updateStatus(){
     countReject.innerText = allCounts.rejected;
 
     countAvailableJobs.innerText = allCounts[currentButton];
+
+    if(allCounts[currentButton] < 1){
+        emptyState.classList.remove('hidden');
+    }else{
+        emptyState.classList.add('hidden');
+    }
 }
  updateStatus()
