@@ -39,4 +39,12 @@ function currentTab(currentTab){
     }
 
 }
+
+// count update
+const countTotal =document.getElementById('count-total');
+const countInterview =document.getElementById('count-interview');
+const countReject =document.getElementById('count-reject');
+
+countTotal.innerText = allSectionContainer.children.length
+
 currentTab(currentButton);
