@@ -44,7 +44,24 @@ function currentTab(currentTab){
 const countTotal =document.getElementById('count-total');
 const countInterview =document.getElementById('count-interview');
 const countReject =document.getElementById('count-reject');
-
 countTotal.innerText = allSectionContainer.children.length
 
 currentTab(currentButton);
+
+// All Job Container
+
+document.getElementById('all-job-container').addEventListener('click', function(event){
+    // console.log(event.target);
+    const clickElement = event.target;
+    const card = clickElement.closest('.job-card');
+
+    if(clickElement.classList.contains('interview')){
+        // console.log('interview clicked');
+        interviewSectionContainer.appendChild(card)
+    } else if(clickElement.classList.contains('rejected')){
+        // console.log('rejected clicked');
+        rejectedSectionContainer.appendChild(card)
+    } else if(clickElement.classList.contains('delete')){
+        // console.log('delete clicked');
+    }
+})

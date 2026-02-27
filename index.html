@@ -77,17 +77,17 @@
 
     <!-- main section -->
 
-    <main class="w-11/12 mx-auto pt-[50px]">
+    <main class="w-11/12 mx-auto pt-[50px]" id="all-job-container">
         <section id="all-section-container" class="hidden">
             <!-- card 1 -->
-            <div class="p-6 space-y-3.5 bg-[#eeeded] rounded-lg">
+            <div class="job-card p-6 space-y-3.5 bg-[#eeeded] rounded-lg mt-5">
                 <div class="flex justify-between items-center">
                     <div class="">
                         <h2 class="text-[#002C5C] text-2xl font-semibold">Mobile First Corp</h2>
                         <h3 class="text-[#64748B]">React Native Developer</h3>
                     </div>
                     <div
-                        class="w-[60px] h-[60px] bg-[#d3d1d1] rounded-full flex justify-center items-center text-2xl text-gray-700 hover:text-black hover:bg-[#c2c1c1] cursor-pointer border-2 border-gray-400">
+                        class="delete w-[60px] h-[60px] bg-[#d3d1d1] rounded-full flex justify-center items-center text-2xl text-gray-700 hover:text-black hover:bg-[#c2c1c1] cursor-pointer border-2 border-gray-400">
                         <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
@@ -98,8 +98,31 @@
                     of users worldwide.
                 </p>
                 <div class="flex gap-5">
-                    <button class="uppercase btn border-2 border-green-400 text-green-500">interview</button>
-                    <button class="uppercase btn border-2 border-red-500 text-red-500">Rejected</button>
+                    <button class="interview uppercase btn border-2 border-green-400 text-green-500">interview</button>
+                    <button class="rejected uppercase btn border-2 border-red-500 text-red-500">Rejected</button>
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="job-card p-6 space-y-3.5 bg-[#eeeded] rounded-lg mt-5">
+                <div class="flex justify-between items-center">
+                    <div class="">
+                        <h2 class="text-[#002C5C] text-2xl font-semibold">WebFlow Agency</h2>
+                        <h3 class="text-[#64748B]">Web Designer & Developer</h3>
+                    </div>
+                    <div
+                        class="delete w-[60px] h-[60px] bg-[#d3d1d1] rounded-full flex justify-center items-center text-2xl text-gray-700 hover:text-black hover:bg-[#c2c1c1] cursor-pointer border-2 border-gray-400">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </div>
+                </div>
+                <p class="text-[#64748B]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                <button class="btn uppercase text-[#002C5C]">Not Applied</button>
+                <p class="text-[#323B49]">
+                    Create stunning web experiences for high-profile clients. Must have portfolio and experience with
+                    modern web design trends.
+                </p>
+                <div class="flex gap-5">
+                    <button class="interview uppercase btn border-2 border-green-400 text-green-500">interview</button>
+                    <button class="rejected uppercase btn border-2 border-red-500 text-red-500">Rejected</button>
                 </div>
             </div>
         </section>
