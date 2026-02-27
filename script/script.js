@@ -13,6 +13,8 @@ const emptyState = document.getElementById('empty-state');
 
 function currentTab(currentTab){
     // console.log(button)
+
+    currentButton = currentTab;
     const allTabs = ['all', 'interview', 'rejected'];
     for(const tab of allTabs){
         const buttonName = document.getElementById('tab-' + tab);
@@ -49,14 +51,15 @@ function currentTab(currentTab){
             emptyState.classList.remove('hidden');
         }
     }
-
+    updateStatus()
 }
 
 // count update
 const countTotal =document.getElementById('count-total');
 const countInterview =document.getElementById('count-interview');
 const countReject =document.getElementById('count-reject');
-countTotal.innerText = allSectionContainer.children.length
+const countAvailableJobs = document.getElementById('available-jobs');
+// countTotal.innerText = allSectionContainer.children.length
 
 currentTab(currentButton);
 
@@ -101,5 +104,6 @@ function updateStatus(){
     countInterview.innerText = allCounts.interview;
     countReject.innerText = allCounts.rejected;
 
+    countAvailableJobs.innerText = allCounts[currentButton];
 }
  updateStatus()
