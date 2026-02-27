@@ -61,7 +61,8 @@ currentTab(currentButton);
 
 // All Job Container
 
-document.getElementById('all-job-container').addEventListener('click', function(event){
+document.getElementById('all-job-container')
+.addEventListener('click', function(event){
     // console.log(event.target);
     const clickElement = event.target;
     const card = clickElement.closest('.job-card');
@@ -73,15 +74,25 @@ document.getElementById('all-job-container').addEventListener('click', function(
         statusBtn.innerText = 'Interview';
         statusBtn.style.color = '#08e62d';
         statusBtn.style.border = '2px solid #08e62d';
-        interviewSectionContainer.appendChild(card)
+        interviewSectionContainer.appendChild(card);
+         updateStatus()
     } else if(clickElement.classList.contains('rejected')){
         // console.log('rejected clicked');
         statusBtn.innerText = 'Rejected';
         statusBtn.style.color = 'red';
         statusBtn.style.border = '2px solid red';
-        rejectedSectionContainer.appendChild(card)
+        rejectedSectionContainer.appendChild(card);
+         updateStatus()
     } else if(clickElement.classList.contains('delete')){
         // console.log('delete clicked');
         parentCard.removeChild(card);
+         updateStatus();
     }
 })
+
+function updateStatus(){
+    countTotal.innerText = allSectionContainer.children.length;
+    countInterview.innerText = interviewSectionContainer.children.length;
+    countReject.innerText = rejectedSectionContainer.children.length;
+}
+ updateStatus()
