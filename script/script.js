@@ -54,12 +54,19 @@ document.getElementById('all-job-container').addEventListener('click', function(
     // console.log(event.target);
     const clickElement = event.target;
     const card = clickElement.closest('.job-card');
+    const statusBtn = card.querySelector('.status-btn');
 
     if(clickElement.classList.contains('interview')){
         // console.log('interview clicked');
+        statusBtn.innerText = 'Interview';
+        statusBtn.style.color = '#08e62d';
+        statusBtn.style.border = '2px solid #08e62d';
         interviewSectionContainer.appendChild(card)
     } else if(clickElement.classList.contains('rejected')){
         // console.log('rejected clicked');
+        statusBtn.innerText = 'Rejected';
+        statusBtn.style.color = 'red';
+        statusBtn.style.border = '2px solid red';
         rejectedSectionContainer.appendChild(card)
     } else if(clickElement.classList.contains('delete')){
         // console.log('delete clicked');
