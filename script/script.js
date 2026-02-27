@@ -31,7 +31,8 @@ function currentTab(currentTab){
         section.classList.add('hidden')
     }
 
-    emptyState.classList.add('hidden');
+    // emptyState.classList.add('hidden');
+    emptyState.classList.add("hidden");
     if(currentTab === 'all'){
         allSectionContainer.classList.remove('hidden');
         if(allSectionContainer.children.length < 1){
