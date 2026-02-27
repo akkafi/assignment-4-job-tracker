@@ -54,6 +54,7 @@ document.getElementById('all-job-container').addEventListener('click', function(
     // console.log(event.target);
     const clickElement = event.target;
     const card = clickElement.closest('.job-card');
+    const parentCard = card.parentNode;
     const statusBtn = card.querySelector('.status-btn');
 
     if(clickElement.classList.contains('interview')){
@@ -70,5 +71,6 @@ document.getElementById('all-job-container').addEventListener('click', function(
         rejectedSectionContainer.appendChild(card)
     } else if(clickElement.classList.contains('delete')){
         // console.log('delete clicked');
+        parentCard.removeChild(card);
     }
 })
